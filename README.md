@@ -1,2 +1,3 @@
 1. First Commit - Simple dropdown menu
-2. Second Commit - moved section in separated component. Lifted State
+2. Second Commit - Moved section in separated component. Lifted State
+3. Third Commit - Moved results in separated component. Implemented switch statement.
