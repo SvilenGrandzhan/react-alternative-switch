@@ -3,7 +3,7 @@ import Section from "./Section";
 import Display from "./Display";
 
 export default function App() {
-  const [value, setValue] = useState("Tank");
+  const [value, setValue] = useState("");
 
   return (
     <div>

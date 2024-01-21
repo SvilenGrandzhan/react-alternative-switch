@@ -1,28 +1,10 @@
+import { SWITCH_MAP } from "./switchMap";
+
 export default function Section({ selectedValue, onSetValue }) {
   const handleChange = (e) => {
-    let heroClass;
-    switch (e.target.value) {
-      case "Tank":
-        heroClass = "Fighter";
-        break;
-      case "Striker":
-        heroClass = "Rogue";
-        break;
-      case "Healer":
-        heroClass = "Cleric";
-        break;
-      case "Blaster":
-        heroClass = "Sorcerer";
-        break;
-      case "Controller":
-        heroClass = "Wizard";
-        break;
-      default:
-        heroClass = "Choose class";
-        break;
-    }
-    onSetValue(heroClass);
+    onSetValue(SWITCH_MAP[e.target.value]);
   };
+
   return (
     <div style={{ display: "flex" }}>
       <p>Preferred DnD role: </p>
@@ -30,6 +12,7 @@ export default function Section({ selectedValue, onSetValue }) {
         value={selectedValue}
         onChange={handleChange}
       >
+        <option value="">Choose</option>
         <option value="Tank">Tank</option>
         <option value="Striker">Striker</option>
         <option value="Healer">Healer</option>
