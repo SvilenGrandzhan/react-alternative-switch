@@ -1,25 +1,27 @@
 export default function Section({ selectedValue, onSetValue }) {
   const handleChange = (e) => {
+    let heroClass;
     switch (e.target.value) {
       case "Tank":
-        onSetValue("Fighter");
+        heroClass = "Fighter";
         break;
       case "Striker":
-        onSetValue("Rogue");
+        heroClass = "Rogue";
         break;
       case "Healer":
-        onSetValue("Cleric");
+        heroClass = "Cleric";
         break;
       case "Blaster":
-        onSetValue("Sorcerer");
+        heroClass = "Sorcerer";
         break;
       case "Controller":
-        onSetValue("Wizard");
+        heroClass = "Wizard";
         break;
       default:
-        onSetValue("Choose class");
+        heroClass = "Choose class";
         break;
     }
+    onSetValue(heroClass);
   };
   return (
     <div style={{ display: "flex" }}>
