@@ -1,3 +1,3 @@
 export default function Display({ displayedValue }) {
-  return <div>{`Recommended DnD class: ${displayedValue}`}</div>;
+  return <div>{displayedValue ? `Recommended DnD class: ${displayedValue}` : null}</div>;
 }
